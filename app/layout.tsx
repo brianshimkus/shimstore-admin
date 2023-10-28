@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Shimstore Admin',
-	description: 'Shimstore Admin',
+	title: 'ShimStore Admin',
+	description: 'ShimStore Admin',
 }
 
 export default function RootLayout({
