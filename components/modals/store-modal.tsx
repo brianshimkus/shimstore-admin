@@ -19,6 +19,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import toast from 'react-hot-toast'
+import { redirect } from 'next/navigation'
 
 const formSchema = z.object({
 	name: z.string().min(1),
@@ -42,7 +43,7 @@ export const StoreModal = () => {
 
 			const response = await axios.post('/api/stores', values)
 
-			toast.success('Store created!')
+			window.location.assign(`/${response.data.id}`)
 		} catch (error) {
 			toast.error('Something went wrong.')
 		} finally {
