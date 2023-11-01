@@ -1,6 +1,7 @@
 'use client'
 
 import { AlertModal } from '@/components/modals/alert-modal'
+import { ApiAlert } from '@/components/ui/api-alert'
 import { Button } from '@/components/ui/button'
 import {
 	Form,
@@ -128,6 +129,11 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
 				</form>
 			</Form>
 			<Separator />
+			<ApiAlert
+				title='NEXT_PUBLIC_API_URL'
+				description={`${origin}/api/${params.storeId}}`}
+				variant='public'
+			/>
 		</>
 	)
 }
